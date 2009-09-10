@@ -1,0 +1,27 @@
+Message Logger
+===============
+
+Message Logger was initially developed for internal use at Inigral Inc. to easily monitor log messages from a large quanity of applications.
+
+Credit goes to Exception Logger for providing an excellent example of how to create plugins such as this one.
+
+To install:
+
+    script/plugin install git://github.com/inigral/RSS-Message-Logger.git
+
+To use this plugin you will need to run the following migration:
+
+    create_table :logged_messages, :force => true do |t|
+      t.string :title, :source
+      t.text :description
+      t.integer :severity
+      t.timestamps
+    end
+
+Then add the following route to routes.rb:
+
+  map.resources :logged_messages
+
+The RSS feed of your logs will be available at:
+
+    yourdomain.com/logged_messages/

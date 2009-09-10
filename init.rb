@@ -1,0 +1,1 @@
+LoggedMessagesController.view_paths = [File.join(directory, 'views')]
