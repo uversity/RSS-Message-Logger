@@ -25,3 +25,4 @@ Then add the following route to routes.rb:
 The RSS feed of your logs will be available at:
 
     yourdomain.com/logged_messages/
+
