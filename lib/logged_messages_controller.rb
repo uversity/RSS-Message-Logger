@@ -1,5 +1,4 @@
-class LoggedMessagesController < ActionController::Base
-  skip_filter :all
+class LoggedMessagesController < ActionController::Base  
 
   def index
     @messages = LoggedMessage.find(:all, :limit => 10, :order => "created_at DESC")
